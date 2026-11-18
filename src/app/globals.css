@@ -1,26 +1,186 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/*
+  YAGYDI brand colours
+
+  Burnt Orange #D87110 — Energy | Creativity | Action.
+  Represents the enthusiasm, innovation and youthful energy that drive our work.
+  It inspires participation and bold ideas for change.
+
+  Wisteria #805D93 — Purpose | Humanity | Leadership.
+  Reflects our commitment to people, inclusion and transformational impact.
+  It symbolises dignity, trust and a brighter future for young people.
+
+  Lavender Gray #C9B6BE — Care | Inclusion | Community.
+  Brings balance and warmth to our identity.
+  It represents compassion, equity and the diverse communities we serve.
+
+  Black #000000 — Strength | Clarity | Integrity.
+  Provides credibility and structure. It symbolises accountability,
+  professionalism and our commitment to good governance as outlined in our constitution.
+
+  Roles:
+  - Wisteria: primary brand colour (headers, key sections, links, nav accents)
+  - Burnt Orange: action colour (Donate and primary CTAs, highlights, counters, small accents)
+  - Lavender Gray: soft section backgrounds, cards, dividers
+  - Black: text, footer background, strong contrast sections
+
+  Tints are each core colour mixed with white at 80%, 60%, 40% and 20%.
+  Darker text shades: orange-700 #A9560A, wisteria-700 #5E4370, wisteria-900 #3B2A47.
+
+  Accessibility:
+  - Burnt Orange on white is only about 3.2:1. Never use it for small body text on white.
+  - Orange text uses orange-700. On orange buttons use black text.
+  - White text on orange only if it is bold and at least 18px.
+  - White text on Wisteria passes AA.
+  - Outfit is loaded in the root layout and exposed as --font-outfit.
+*/
+
+@theme {
+  --color-*: initial;
+
+  --color-transparent: transparent;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-orange-100: #d87110;
+  --color-orange-80: #e08d40;
+  --color-orange-60: #e8aa70;
+  --color-orange-40: #efc6a0;
+  --color-orange-20: #f7e3cf;
+  --color-orange-700: #a9560a;
+
+  --color-wisteria-100: #805d93;
+  --color-wisteria-80: #997da9;
+  --color-wisteria-60: #b39ebe;
+  --color-wisteria-40: #ccbed4;
+  --color-wisteria-20: #e6dfe9;
+  --color-wisteria-700: #5e4370;
+  --color-wisteria-900: #3b2a47;
+
+  --color-lavender-100: #c9b6be;
+  --color-lavender-80: #d4c5cb;
+  --color-lavender-60: #dfd3d8;
+  --color-lavender-40: #e9e2e5;
+  --color-lavender-20: #f4f0f2;
+
+  --color-neutral-100: #000000;
+  --color-neutral-80: #333333;
+  --color-neutral-60: #666666;
+  --color-neutral-40: #999999;
+  --color-neutral-20: #cccccc;
+
+  --color-background: #fbf9fa;
+  --color-foreground: #1a1a1a;
+
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7.5rem;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-size: 1.125rem;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+    scroll-margin-top: 8rem;
+  }
+
+  h1,
+  h2 {
+    color: var(--color-wisteria-100);
+    font-weight: 800;
+    line-height: 1.08;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--color-wisteria-900);
+    font-weight: 700;
+    line-height: 1.15;
+  }
+
+  a {
+    color: var(--color-wisteria-700);
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+  }
+
+  a:hover {
+    color: var(--color-wisteria-900);
+  }
+
+  ::selection {
+    background-color: var(--color-wisteria-40);
+    color: var(--color-wisteria-900);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  .skip-link {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .skip-link:focus {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 70;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+    border-radius: 9999px;
+    background: white;
+    padding: 0.75rem 1rem;
+    color: var(--color-wisteria-900);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    outline: 2px solid var(--color-wisteria-700);
+    outline-offset: 2px;
+    box-shadow: 0 8px 24px rgba(59, 42, 71, 0.16);
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+  }
 }
