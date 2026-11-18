@@ -68,19 +68,11 @@ export const legalPages = {
         ],
       },
       {
-        id: "cookies",
-        heading: "Cookies and a saved preference",
-        paragraphs: [
-          "This website can store one choice in your browser: whether you selected Accept or Essential only on the cookie banner. That choice is kept in local storage under a name like yagydi-cookie-consent so the banner does not keep asking. It is not sent to YAGYDI as a message.",
-          "Essential only means the site records that preference and does not treat you as having agreed to anything further. Accept means you are willing for non-essential cookies to be used if analytics is added later. No analytics tool is loaded by this draft, either way.",
-          "Your browser settings can also block storage. If storage is blocked, the banner may appear again on a later visit.",
-        ],
-      },
-      {
         id: "analytics",
         heading: "Analytics, if it is added later",
         paragraphs: [
-          "This draft assumes analytics is not running. If YAGYDI later adds a tool that measures visits, that tool may set its own cookies and the organisation should update this page before switching it on. Until then, do not assume your visit is being measured.",
+          `${legalDraftBanner} This draft site does not set cookies and does not load analytics.`,
+          "If a later tool would set cookies, YAGYDI should update this page before switching it on.",
         ],
       },
       {
