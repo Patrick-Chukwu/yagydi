@@ -33,11 +33,11 @@ export const contact = {
 
 // TODO: replace with real content
 export const impactStats = [
-  "20+ Years of impact",
+  "10+ Years of impact",
   "1000+ Young people reached",
-  "50+ Communities",
+  "10+ Communities",
   "25+ Schools",
-  "10+ Partners",
+  "15+ Partners",
 ] as const;
 
 // TODO: replace with real content
