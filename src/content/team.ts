@@ -17,7 +17,7 @@ function seats(prefix: string, count: number): TeamMember[] {
 }
 
 // TODO: replace with real content
-export const team: readonly TeamMember[] = seats("team", 4);
+export const team: readonly TeamMember[] = seats("team", 8);
 
 // TODO: replace with real content
-export const board: readonly TeamMember[] = seats("board", 2);
+export const board: readonly TeamMember[] = seats("board", 4);

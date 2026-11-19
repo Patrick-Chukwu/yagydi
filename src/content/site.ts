@@ -26,18 +26,18 @@ export function sdgById(id: SdgId) {
 
 // TODO: replace with real content
 export const contact = {
-  email: "[info@yagydi.org]",
-  phone: "[+234 ...]",
-  address: "[Office address, Nigeria]",
+  email: "hello@ynginitiative.org, ynginitiative@gmail.com",
+  phone: "+2349065301561",
+  address: "LiyaGold Building, Tanke Rd, opposite BOVAS Filling Station, Oke Odo, Ilorin 240102, Kwara State, Nigeria.",
 } as const;
 
 // TODO: replace with real content
 export const impactStats = [
   "20+ Years of impact",
-  "[X] Young people reached",
-  "[X] Communities",
-  "[X] Schools",
-  "[X] Partners",
+  "1000+ Young people reached",
+  "50+ Communities",
+  "25+ Schools",
+  "10+ Partners",
 ] as const;
 
 // TODO: replace with real content
