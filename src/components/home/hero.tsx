@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Eyebrow } from "@/components/ui/eyebrow";
-import { ImagePlaceholder } from "@/components/ui/image-placeholder";
+// import { ImagePlaceholder } from "@/components/ui/image-placeholder";
 import { site } from "@/content/site";
-
+import Image from "next/image";
 export function HomeHero() {
   return (
     <section id="hero" className="relative overflow-x-clip bg-background">
@@ -34,10 +34,19 @@ export function HomeHero() {
               className="absolute -bottom-4 -right-2 size-28 rounded-full bg-orange-40 sm:size-40"
             />
             <div className="relative overflow-hidden rounded-[2rem] shadow-[0_20px_50px_rgba(59,42,71,0.12)]">
-              <ImagePlaceholder
+              {/* <ImagePlaceholder
                 label="Young people at a YAGYDI workshop"
                 className="aspect-[4/5] rounded-[2rem] pb-28 sm:aspect-[5/4]"
-              />
+              /> */}
+              <Image
+  src="/images/home.jpeg"
+  alt="Young people at a YAGYDI"
+  width={2048}
+  height={1367}
+  sizes="(min-width: 1024px) 50vw, 100vw"
+  priority
+  className="aspect-[4/5] w-full object-cover sm:aspect-[5/4]"
+/>
             </div>
             <p className="absolute bottom-4 left-4 right-4 rounded-2xl bg-white px-4 py-3 shadow-lg sm:right-auto sm:max-w-64">
               <span className="block text-3xl font-extrabold leading-none text-orange-700">20+</span>
