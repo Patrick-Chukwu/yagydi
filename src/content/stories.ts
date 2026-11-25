@@ -3,14 +3,17 @@
 export const youthVoice = {
   notice: "Placeholder. Not a real participant or story.",
   quote:
-    "[TODO: replace with a real participant quote. This text is not a testimonial from a young person.]",
-  name: "[Participant name]",
-  role: "[Programme, State]",
+    "Amazing experience! I learned so much about leadership and community engagement. The program really empowered me to make a difference in my community.",
+  name: "Patrick Chukwu",
+  role: "Cofounder, Biuda",
   href: "/latest",
   cta: "Read their story",
-  photoLabel: "[Photo coming soon]",
+  photo: {
+    src: "/images/patrick-chukwu.png",
+    alt: "Patrick Chukwu",
+  },
+  photoLabel: "Patrick",
 } as const;
 
-// TODO: replace with real content
 
-export const latestIntro = "These cards are placeholders and are not published stories.";
+export const latestIntro = "Check out the latest stories from us.";

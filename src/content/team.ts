@@ -6,7 +6,7 @@ export type TeamMember = {
 };
 
 export const teamNotice =
-  "Every name, role, and photo here is a placeholder until the real team and board are published.";
+  "A well rounded team of young people with diverse skills and experiences, working together to achieve our mission.";
 
 function seats(prefix: string, count: number): TeamMember[] {
   return Array.from({ length: count }, (_, index) => ({

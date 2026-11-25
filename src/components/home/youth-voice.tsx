@@ -20,6 +20,7 @@ export function YouthVoice() {
             role={youthVoice.role}
             href={youthVoice.href}
             cta={youthVoice.cta}
+            photo={youthVoice.photo}
             photoLabel={youthVoice.photoLabel}
           />
         </div>
