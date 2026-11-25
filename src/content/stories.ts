@@ -1,6 +1,7 @@
 // TODO: replace with real content
 
 export const youthVoice = {
+  notice: "\n",
   quote:
     "Amazing experience! I learned so much about leadership and community engagement.",
   name: "Patrick Chukwu",
